@@ -1,7 +1,7 @@
 ---
-title: Quickstart Guide - RU
-description: Get started with IW4x
-next: Manual Installation on Windows
+title: Краткое руководство - RU
+description: Краткое руководство по началу работы - RU
+next: Ручная установка в Windows
 ---
 
 import { FileTree, LinkButton, Tabs, TabItem, Steps } from '@astrojs/starlight/components';
@@ -10,20 +10,22 @@ import Video from '@/components/Video.astro';
 import find_directory from "@/assets/vid/install/find_directory.mp4";
 import download_launcher from "@/assets/vid/install/download_launcher.mp4";
 
-## Предварительные условия
 
+
+:::note[Предварительные условия:]
 Клиент IW4x не является самостоятельной игрой для него потребуется установленная игра **Call of Duty: Modern Warfare 2 (2009)**.  
-Если у вас еще нет игры, пожалуйста, сначала купите и установите ее [**из Steam-а**](https://store.steampowered.com/app/10180/Call_of_Duty_Modern_Warfare_2_2009/).  
-
-:::danger[Important Compatibility Notice]
-По состоянию на 2025 год, *Call of Duty: Modern Warfare 2* также доступна в Microsoft Store.  
-**Обратите внимание**: IW4x **не совместим** с этой версией. Поддерживается только **самая последняя версия игры из Steam-а**.
+Если у вас еще нет игры, пожалуйста, сначала купите и установите ее [**из Steam-а**](https://store.steampowered.com/app/10180/Call_of_Duty_Modern_Warfare_2_2009/).
 
 Кроме того, мы часто сталкиваемся с проблемами, на пиратских версиях, включая ошибки и сбои.  
 Мы **не поддерживаем** пиратские копии игры и не оказываем им **никакой помощи**.
 :::
 
-Iw4x необходимо установить в ту же директорию, где находится *Call of Duty: Modern Warfare 2*.  
+:::danger[Важное уведомление о совместимости]
+По состоянию на 2025 год, *Call of Duty: Modern Warfare 2* также доступна в Microsoft Store.  
+**Обратите внимание**: IW4x **не совместим** с этой версией. Поддерживается только **самая последняя версия игры из Steam-а**.
+:::
+
+IW4x необходимо установить в ту же директорию, где находится *Call of Duty: Modern Warfare 2*.  
 Обычно путь к этому каталогу выглядит так:
 
 <Tabs>
@@ -70,7 +72,7 @@ Iw4x необходимо установить в ту же директорию
 
 <Steps>
 
-1. Скачайте лаунчер из [GitHub](https://github.com/iw4x/launcher)
+1. Скачайте лаунчер из репозитория [GitHub](https://github.com/iw4x/launcher) или по прямым сслыкам ниже:
 
     <LinkButton href="https://github.com/iw4x/launcher/releases/latest/download/iw4x-launcher.exe" variant="primary" icon="seti:windows" iconPlacement="start">**Скачать для Windows**</LinkButton>
     <LinkButton href="https://github.com/iw4x/launcher/releases/latest/download/iw4x-launcher-x86_64-unknown-linux-gnu.tar.gz" variant="primary" icon="linux" iconPlacement="start">**Скачать для Linux**</LinkButton>
@@ -83,15 +85,15 @@ Iw4x необходимо установить в ту же директорию
 
 </Steps>
 
-:::caution[Windows protected your PC]
+:::caution[Система Windows защитила ваш компьютер]
 При первом запуске **iw4x-launcher.exe** Windows может выдать предупреждение.  
-Это происходит потому, что данный файл не часто встречается в системах Windows.  
-Это совершенно нормальное поведение - Лаунчер вполне безопасен для использования.  
-Если вы увидите предупреждение, можете смело нажать на **`Дополнительная информация`**, а затем **`Запустить в любом случае`**.
+Это совершенно нормальное поведение - потому, что данный файл не часто встречается в системах Windows. Лаунчер совершенно безопасен для использования.
 
-![Windows rotected your PC](@/assets/img/install/windows_protected_your_pc.png)
+Если вы увидите данное предупреждение, можете смело нажать на **`Подробнее`**, а затем **`Выполнить в любом случае`**.
 
-(И да, предупреждение можно убрать, но для этого требуется сертификат подписания кода от Microsoft, который стоит немалых денег).
+![Система Windows защитила ваш компьютер](@/assets/img/install/windows_protected_your_pc.png)
+
+(И да, предупреждение можно убрать, но для этого требуется сертификат для подписи кода от Microsoft, который стоит немалых денег).
 :::
 
 ## Использование Лаунчера

@@ -9,7 +9,7 @@ import starlightLinksValidator from 'starlight-links-validator'
 //
 export default defineConfig({
   output: 'static',
-  site: 'https://docs.iw4x.io',
+  site: 'https://iw4x-docs.gpcore.ru',
 
   integrations: [
     starlight({
@@ -129,7 +129,7 @@ export default defineConfig({
   //
   vite: {
     server: {
-      allowedHosts: ['docs.iw4x.io'],
+      allowedHosts: ['iw4x-docs.gpcore.ru'],
     },
   },
 });

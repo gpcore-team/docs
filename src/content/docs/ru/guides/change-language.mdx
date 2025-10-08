@@ -1,9 +1,9 @@
 ---
-title: Changing the Language - RU
-description: Change the Lanuage of IW4x
+title: Изменение языка и озвучки
+description: Измените язык интерфейса и озвучки в IW4x
 prev: 
-  link: /get-started/quickstart/
-  label: Quickstart
+  link: /ru/get-started/quickstart/
+  label: Краткое руководство
 ---
 
 import { FileTree, Steps } from '@astrojs/starlight/components';
@@ -11,16 +11,16 @@ import Video from '@/components/Video.astro';
 import change_language from "@/assets/vid/language/change_language.mp4";
 import different_install_location from "@/assets/vid/language/different_install_location.mp4";
 
-:::danger[Important]
+:::danger[Внимание]
 
-Если в вашей версии игры есть [Региональные ограничения в Steam](https://help.steampowered.com/en/faqs/view/58D3-B80D-2943-3CC6), вы не сможете изменить язык!
+Если в вашей версии игры есть [Региональные ограничения в Steam](https://help.steampowered.com/ru/faqs/view/58D3-B80D-2943-3CC6), вы **не сможете** изменить язык!
 
 :::
 
 ## Изменить настройки Steam
 
-Если IW4x установлена в **такую же** директорию, как и ваша версия Steam, вам нужно будет лишь выполнить следующие действия.  
-Если он установлен в **другой** каталог, обратитесь к дополнительным шагам ниже.
+Если IW4x установлен в **ту же** директорию, как и ваша Steam версия игры, вам нужно будет лишь выполнить следующие действия.  
+Если он установлен в **другой** каталог, обратитесь к [дополнительным шагам ниже](#место-установки-отличное-от-steam-версии-игры).
 
 <Steps>
 
@@ -37,20 +37,20 @@ import different_install_location from "@/assets/vid/language/different_install_
 </Steps>
 
 После смены языка Steam загрузит необходимые файлы для выбранного варианта.  
-После завершения загрузки вы можете запустить IW4x и наслаждаться игрой в удобных для вас настройках!
+После завершения загрузки вы можете запустить IW4x и наслаждаться игрой с удобной для вас локализацией!
 
 <Video src={change_language} />
 
-:::caution
+:::caution[Обратите внимание]
 
-Обратите внимание, что загрузка новых языковых файлов может занять некоторое время, в зависимости от вашего интернет-соединения.  
+что загрузка новых языковых файлов может занять довольно продолжительное время, в зависимости от вашего интернет-соединения.  
 Видео, представленное выше, было ускорено в демонстрационных целях.
 
 :::
 
-## Другое место установки
+## Место установки отличное от Steam версии игры 
 
-Если IW4x установлена отдельно от вашей версии Steam, вам придется вручную скопировать языковые файлы.  
+В этом случае, вам придется вручную скопировать языковые файлы.  
 Инструкции по их получению см. в [разделе выше](#изменить-настройки-steam).
 
 ### Файлы для копирования
@@ -58,29 +58,35 @@ import different_install_location from "@/assets/vid/language/different_install_
 Убедитесь, что вы скопировали следующие файлы и папки из вашей установки Steam:
 
 - Файл `localization.txt`
-- Папка `main/video/`
-- Папка `zone/<language>/` (e.g., `zone/russian/` for Russian)
-- Все файлы с именем `localized_<язык>_iw##.iwd` в папке `main/` (например, `localized_russian_iw00.iwd` для русского языка)
+- Папка main/`video`/
+- Папка zone/`<language>`/
+- Все файлы с именем `localized_<язык>_iw##.iwd` в папке `main/`
 
-Обзор структуры файлов ####
+Например, для русского языка это будет:
+
+ zone/`russian`/ 
+  
+ main/`localized_russian_iw0.iwd` - `localized_russian_iw4.iwd`
+
+#### Обзор структуры файлов
 
 <FileTree>
 - `Call of Duty: Modern Warfare 2`
   - main
     - **video**
-      - *.bik all files
+      - .bik - все файлы
     - **localized_\<язык\>_iw00.iwd** 
-    - **..** All `.iwd` файлы для выбранного языка
+    - **..** Все `.iwd` файлы для выбранного языка
     - **localized_\<язык\>_iw##.iwd**
   - zone
     - **\<язык\>/**
-      - *.ff все файлы
+      - .ff - все файлы
   - **localization.txt**
 </FileTree>
 
 ### Файлы для удаления
 
-Теперь в вашей папке `main` находятся файлы `localized_<язык>_iw##.iwd` как для **вновь выбранного языка, так и для того, который вы использовали ранее.
+Теперь в вашей папке `main` находятся файлы `localized_<язык>_iw##.iwd` как для **вновь выбранного языка**, так и для того, который вы использовали ранее.
 Если вы запустите игру, вы увидите ошибку, подобную этой:
 
 ![Couldn't load image 'specialty_new_nonenglish'](@/assets/img/language/error_message.png)
@@ -92,7 +98,7 @@ import different_install_location from "@/assets/vid/language/different_install_
 - **Переместите их** - например, создайте папку `english` рядом с `main` и переместите туда файлы.
 - **Удалите их полностью**.
 
-Какой метод использовать - решать вам. Главное, чтобы папка `main` содержала файлы только для **одного языка**.
+Какой метод использовать - решать вам. Главное, чтобы папка `main` содержала файлы только для **одного** языка.
 
 ### Пример: Русский язык
 
@@ -115,5 +121,5 @@ import different_install_location from "@/assets/vid/language/different_install_
     - **russian/**
   - **localization.txt**
 </FileTree>
-
+А также вылоните действия указанные на [предыдущем шаге](#файлы-для-удаления)
 <Video src={different_install_location} />
